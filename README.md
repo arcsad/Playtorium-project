@@ -17,8 +17,14 @@ This is a simple React Typescript application to calculate the final price of pr
 
    ```bash
    git clone [https://github.com/your-username/product-price-calculator.git](https://github.com/arcsad/Playtorium-project.git)
+   ```
+ ```bash
    cd my-app
+   ```
+```bash
    npm install
+   ```
+ ```bash
    npm start
    ```
   
