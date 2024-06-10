@@ -1,4 +1,4 @@
-# Product Price Calculator with Campaign Discounts
+# Assignment#1  The discount module
 
 This is a simple React Typescript application to calculate the final price of products after applying various campaign discounts.
 
