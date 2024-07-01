@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Product } from "./Product";
-import { Campaign } from "./Campaign";
+import { Product, Campaign } from "./Product";
 import CalculatePrice from "./CalculatePrice";
 import "./output.css";
 
@@ -9,12 +8,12 @@ const existingCampaigns: Campaign[] = [
   { campaign: "Percentage discount", category: "Coupon", discount: 0 },
   {
     campaign: "Percentage discount by item category",
-    category: "On Top",
+    category: "Ontop",
     discount: 0,
   },
   {
     campaign: "Percentage discount by points",
-    category: "On Top",
+    category: "Ontop",
     discount: 0,
   },
   { campaign: "Special campaigns", category: "Seasonal", discount: 0 },

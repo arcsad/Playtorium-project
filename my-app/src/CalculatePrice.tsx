@@ -1,6 +1,5 @@
 import React from "react";
-import { Product } from "./Product";
-import { Campaign } from "./Campaign";
+import { Product, Campaign } from "./Product";
 
 interface CalculatePriceProps {
   products: Product[];
@@ -21,7 +20,8 @@ const CalculatePrice: React.FC<CalculatePriceProps> = ({
     );
 
     const campaignCategories = new Set();
-    const order = { Coupon: 1, Ontop: 2, Seasonal: 3 } as const;
+   
+    const order = { Coupon: 0, Ontop: 1, Seasonal: 2 } as const;
 
     const sortedCampaigns = campaigns
       .sort((a, b) => {
@@ -35,15 +35,16 @@ const CalculatePrice: React.FC<CalculatePriceProps> = ({
         campaignCategories.add(campaign.category);
         return true;
       });
-
+    
     sortedCampaigns.forEach((campaign) => {
+      console.log(campaign)
       if (campaign.category === "Coupon") {
         if (campaign.campaign.includes("Fixed amount")) {
           totalPrice -= campaign.discount;
         } else {
           totalPrice -= (totalPrice * campaign.discount) / 100;
         }
-      } else if (campaign.category === "On Top") {
+      } else if (campaign.category === "Ontop") {
         if (campaign.campaign === "Percentage discount by item category") {
           products.forEach((product) => {
             if (product.category === campaign.itemCategory) {
