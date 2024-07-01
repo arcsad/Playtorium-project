@@ -62,7 +62,7 @@ const CalculatePrice: React.FC<CalculatePriceProps> = ({
         if (campaign.campaign === "Special campaigns") {
           const { xAmount, yAmount } = campaign;
           if (xAmount && yAmount) {
-            const discountMultiplier = Math.floor(totalPrice / xAmount);
+            const discountMultiplier = totalPrice / xAmount;
             const totalDiscount = discountMultiplier * yAmount;
             totalPrice -= totalDiscount;
           }
