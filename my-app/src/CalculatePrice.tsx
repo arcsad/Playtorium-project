@@ -37,7 +37,6 @@ const CalculatePrice: React.FC<CalculatePriceProps> = ({
       });
     
     sortedCampaigns.forEach((campaign) => {
-      console.log(campaign)
       if (campaign.category === "Coupon") {
         if (campaign.campaign.includes("Fixed amount")) {
           totalPrice -= campaign.discount;
